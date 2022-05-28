@@ -1,0 +1,52 @@
+.mygrid{
+    height: 400px !important;
+    width: 500px;
+}
+.row{
+    display: flex;
+    height: 50px;
+}
+.cell{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid darkcyan;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Color CLASSES */
+
+.red{
+    background-color: red;
+}
+.black{
+    background-color: black;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+.grey{
+    background-color: grey;
+}
+.pink{
+    background-color: pink;
+}
+.maroon{
+    background-color:maroon;
+}
+.aqua{
+    background-color: aqua;
+}
+.dodgerblue{
+    background-color: dodgerblue;
+}
+.lightcoral{
+    background-color: lightcoral;
+}
