@@ -5,62 +5,6 @@
  * @param callback Returns selected star count to callback
  */
 
-
-function registerMouseOverEvent(starContainer,count)
-{
-    starContainer.addEventListener('mouseover',(event)=>{
-
-        console.log(event.target);
-
-           let position = Number(event.target.dataset.position);
-
-           if(!isNaN(position))
-           {
-            let mystarContainer = document.getElementById('star');
-             let childNodes = mystarContainer.children;
-
-             for(let i=0;i<position;i++)
-             {
-                 childNodes[i].classList.remove("fa-star-o");
-                 childNodes[i].classList.add("fa-star");
-             }
-
-             //This is useful when we go from higher to lower number of stars!
-             ///Can be optimized by using memoization store the last hovered position
-             for(let i=count-1;i>=position;i--)
-             {
-                 if(childNodes[i].classList.contains("fa-star"))
-                 {
-                    childNodes[i].classList.add("fa-star-o");
-                    childNodes[i].classList.remove("fa-star");
-                 }
-             }
-           }
-    })
-}
-function registerMouseLeaveEvent(starContainer)
-{
-    starContainer.addEventListener('mouseleave',(event)=>{
-        starContainer = document.getElementById('star');
-        let childNodes = starContainer.children;
-        let size = childNodes.length;
-        for(let i=0;i<size;i++)
-        {
-            childNodes[i].classList.add("fa-star-o");
-            childNodes[i].classList.remove("fa-star");
-        }
-})
-}
-function registerOnClickEvent(starContainer,callback)
-{
-    starContainer.addEventListener('click',(event)=>{
-        let position = Number(event.target.dataset.position);
-        if(!isNaN(position))
-        {
-            callback(position);
-        }
-})
-}
 function Star(el, count, callback) {
     let selectedStars=-1;
     const starContainer = document.querySelector(el);
