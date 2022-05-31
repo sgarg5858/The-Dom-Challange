@@ -1,0 +1,35 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#calendar{
+    height: 700px;
+    width: 800px;
+    overflow-y: scroll;
+    border: 2px solid lightgray;
+    position: relative;
+}
+.hour{
+    display: flex;
+    height: 100px;
+}
+.time{
+    width: 9%;   
+    padding-left: 1%;
+}
+.event{
+    width: 90%;   
+    border-top: 1px solid lightgray;
+    margin-top: 10px;
+
+}
+.myevent1{
+    position: absolute;
+    margin-left: 10%;
+    border-radius: 10px;
+    width: 90%;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+}

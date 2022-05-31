@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#chessboard{
+    height: 600px;
+    width: 600px;
+    border: 1px solid black;
+}
+
+.row{
+    display: flex;
+}
+.cell{
+    display: inline-block;
+    width: 75px ;
+    height: 75px;
+}
+.bg-black{
+    background-color: black;
+}
+.bg-white{
+    background-color: white;
+}
+.bg-red{
+    background-color: red ;
+}
